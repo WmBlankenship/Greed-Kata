@@ -18,7 +18,7 @@ namespace Greed
             return _score;
         }
 
-        public void ScoreTriples()
+        private void ScoreTriples()
         {
             for (int i = 1; i <= 6; i++)
             {
@@ -30,7 +30,7 @@ namespace Greed
             }
         }
 
-        public void ScoreSingles()
+        private void ScoreSingles()
         {
             _score += _dice.Sum(x => x == 1 ? 100 : 0);
             _score += _dice.Sum(x => x == 5 ? 50 : 0);
